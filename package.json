@@ -1,7 +1,7 @@
 {
   "name": "@soya/llms-txt-maker",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "packageManager": "pnpm@8.15.4",
   "scripts": {

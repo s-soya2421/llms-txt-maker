@@ -2,6 +2,8 @@
 
 Toolchain for generating AI-friendly Markdown indexes (`llms.txt` and `llms-full.txt`) for web projects. The workspace bundles a core library, a Next.js adapter, and a CLI so teams can surface documentation and content to language models without manual curation.
 
+> ⚠️ このモノレポは現在も v0.1 系の実装段階であり、API・挙動は予告なく変更される可能性があります。
+
 ## Packages
 
 - **`@soya/llms-txt`**  

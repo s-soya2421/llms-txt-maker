@@ -1,6 +1,6 @@
 {
   "name": "@soya/llms-txt-cli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "bin": {
     "llms-txt": "./bin/llms-txt"
