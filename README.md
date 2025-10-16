@@ -7,7 +7,7 @@ Toolchain for generating AI-friendly Markdown indexes (`llms.txt` and `llms-full
 - **`@soya/llms-txt`**  
   Core rendererとコレクタ。`defineConfig`, `render`, `renderFull`, `collectContent`, `collectFromFS` などを提供します。
 - **`@soya/llms-txt-next`**  
-  Helper to expose `llms.txt` via Next.js routes with sensible defaults.
+  Helper to expose `llms.txt` via Next.js routes with sensible defaults（Edge/Node runtime切り替えなどは今後の対応予定で、統合機能は継続実装中です）。
 - **`@soya/llms-txt-cli`**  
   Commander ベースの CLI で `llms.config.ts` を読み込み、コレクタを実行し `public/llms.txt` を生成します（`--sitemap` や `--max-pages` で一時的な上書きも可能）。
 - **Examples**  
@@ -18,7 +18,7 @@ Toolchain for generating AI-friendly Markdown indexes (`llms.txt` and `llms-full
 - Render concise or full-text LLM indexes. `render` はサイトマップ由来のページタイトル／ディスクリプションを先頭に据え、以降の各ページを `##` 見出し + 単一リンクで列挙します。
 - Collect sources from manual entries, local Markdown/MDX (frontmatter-aware), or live pages discovered via sitemap crawl (robots.txt-aware, optional throttling).
 - Config validation powered by Zod (strict mode, locale-aware messages) and optional PII redaction.
-- CLI `build` command with dry-run mode; future commands (`crawl`, `fetch`, `build-llms`) planned.
+- CLI `build` command with dry-run mode; `crawl` command is available today (experimental), while `fetch` and `build-llms` remain planned.
 - Workspace tooling: pnpm, Biome, Vitest, Changesets.
 
 ## Getting Started
@@ -112,6 +112,8 @@ export const { GET } = makeRoute({ config });
 ```
 
 Add the route to your Next.js app to expose `/api/llms`.
+
+🚧 The Next.js adapter is still under active development (e.g. static path handling and runtime auto-detection are pending).
 
 ## Development
 
