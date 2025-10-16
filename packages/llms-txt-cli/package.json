@@ -1,0 +1,36 @@
+{
+  "name": "@soya/llms-txt-cli",
+  "version": "0.0.0",
+  "type": "module",
+  "bin": {
+    "llms-txt": "./bin/llms-txt"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "clean": "rimraf dist",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint . --apply",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "@soya/llms-txt": "workspace:*",
+    "bundle-require": "^4.2.1",
+    "commander": "^11.1.0",
+    "esbuild": "^0.18.20"
+  }
+}

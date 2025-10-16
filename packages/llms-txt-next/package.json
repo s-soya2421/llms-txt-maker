@@ -1,0 +1,33 @@
+{
+  "name": "@soya/llms-txt-next",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "clean": "rimraf dist",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint . --apply",
+    "test": "echo \"No tests yet\""
+  },
+  "peerDependencies": {
+    "next": "^13.5.0 || ^14.0.0"
+  },
+  "dependencies": {
+    "@soya/llms-txt": "workspace:*"
+  }
+}
+

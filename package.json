@@ -1,0 +1,28 @@
+{
+  "name": "@soya/llms-txt-maker",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@8.15.4",
+  "scripts": {
+    "init": "pnpm --filter @soya/llms-txt-cli run build && node packages/llms-txt-cli/bin/llms-txt init-config",
+    "lint": "pnpm -r lint",
+    "lint:fix": "pnpm -r lint:fix",
+    "test": "vitest run --workspace vitest.workspace.ts",
+    "test:watch": "vitest watch --workspace vitest.workspace.ts",
+    "build": "pnpm -r build",
+    "clean": "pnpm -r clean",
+    "changeset": "changeset"
+  },
+  "devDependencies": {
+    "@soya/llms-txt": "workspace:*",
+    "@biomejs/biome": "^1.5.1",
+    "@changesets/cli": "^2.27.1",
+    "@types/node": "^18.19.10",
+    "rimraf": "^5.0.5",
+    "tsup": "^7.2.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
+}

@@ -1,0 +1,7 @@
+title:
+  selector: "title"
+fields:
+  description:
+    selector: "meta[name='description']"
+    attr: "content"
+

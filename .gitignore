@@ -1,0 +1,49 @@
+# Node.js artifacts
+node_modules
+dist
+.turbo
+.tmp
+packages/**/dist
+examples/**/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.DS_Store
+.idea/
+.vscode/
+
+# Coverage / reports
+coverage
+report.json
+
+# Env files
+.env
+.env.*
+
+# pnpm
+.pnpm-store
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# tsup generated typings/maps
+packages/llms-txt-cli/tsup.config.d.ts
+packages/llms-txt-cli/tsup.config.d.ts.map
+packages/llms-txt-cli/tsup.config.js.map
+
+# npm lockfile
+package-lock.json
+
+# Generated content
+txtDir
+crawled
+public/llms.txt
+sitemap-temp.xml
+
+# AGENT
+AGENTS.md
